@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenHarvest Agribusiness – Sustainable Farming Solutions</title>
+  <meta name="description" content="GreenHarvest – Premium seeds, fertilizers, training and market access for modern farmers."/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2d6a4f;
+      --secondary: #40916c;
+      --accent: #95d5b2;
+      --light: #f1f8f5;
+      --dark: #1b4332;
+      --gold: #52b788;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Montserrat',sans-serif; background:var(--light); color:#333; line-height:1.6; }
+
+    /* Responsive Navbar – W3Schools style */
+    .topnav {
+      background-color: var(--primary);
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 18px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .topnav a:hover { background-color: var(--gold); }
+    .topnav .icon { display: none; }
+
+    @media screen and (max-width: 768px) {
+      .topnav a:not(:first-child) { display: none; }
+      .topnav a.icon { float: right; display: block; }
+      .topnav.responsive { position: relative; }
+      .topnav.responsive a.icon { position: absolute; right: 0; top: 0; }
+      .topnav.responsive a { float: none; display: block; text-align: left; }
+    }
+
+    /* Hero Section – Now with Farm Yard Background */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2') center/cover no-repeat fixed;
+      color: white;
+      text-align: center;
+      padding: 180px 20px;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.4rem; max-width: 800px; margin: 0 auto 30px; }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    .btn:hover { background: #74c69d; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+    section { padding: 80px 5%; }
+    .container { max-width: 1200px; margin: auto; }
+
+    h2 { text-align:center; color:var(--primary); margin-bottom: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card img { width: 90px; margin-bottom: 20px; }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 50px 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    th {
+      background: var(--primary);
+      color: white;
+      padding: 18px;
+      font-weight: 600;
+    }
+    td, th { border: none; padding: 15px; text-align: left; }
+    tr:nth-child(even) { background: #f8fdfc; }
+
+    /* Lists */
+    ul.check { list-style: none; }
+    ul.check li {
+      padding: 10px 0 10px 40px;
+      position: relative;
+    }
+    ul.check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="topnav" id="myTopnav">
+    <a href="#home" class="active">GreenHarvest</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu</a>
+  </nav>
+
+  <!-- Hero – Farm Yard Background -->
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>Welcome to GreenHarvest</h1>
+      <p>Empowering farmers with premium seeds, modern equipment, expert training and guaranteed market access across Africa.</p>
+      <a href="#contact" class="btn">Partner With Us Today</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About GreenHarvest</h2>
+      <p style="text-align:center;max-width:900px;margin:0 auto 40px;">
+        Transforming agriculture through sustainable practices, technology and fair trade since 2018.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1042/1042333.png" alt="Vision">
+          <h3>Our Vision</h3>
+          <p>A food-secure Africa powered by profitable, climate-smart farming.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2091/2091660.png" alt="Mission">
+          <h3>Our Mission</h3>
+          <p>Deliver quality inputs, training and market linkages to farmers of all scales.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2991/2991101.png" alt="Values">
+          <h3>Core Values</h3>
+          <ul class="check">
+            <li>Sustainability</li>
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Farmer-First Approach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Table -->
+  <section id="products" style="background:#f9fcfb;">
+    <div class="container">
+      <h2>Our Premium Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Key Benefit</th>
+            <th>Pack Size</th>
+            <th>Price (USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Hybrid Maize Seed – GH-900</td><td>Seeds</td><td>Drought tolerant</td><td>10 kg</td><td>48.00</td></tr>
+          <tr><td>NPK 15-15-15 Fertilizer</td><td>Fertilizer</td><td>Balanced nutrients</td><td>50 kg</td><td>35.00</td></tr>
+          <tr><td>Glyphosate Herbicide</td><td>Agrochemical</td><td>Broad-spectrum control</td><td>1 L</td><td>12.50</td></tr>
+          <tr><td>Organic Compost Booster</td><td>Organic</td><td>Improves soil health</td><td>25 kg</td><td>18.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Services – Ordered & Unordered Lists -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:50px;justify-content:center;margin-top:50px;">
+        <div style="flex:1;min-width:300px;">
+          <h3>Farmer Training Steps</h3>
+          <ol style="font-size:1.1em;padding-left:20px;">
+            <li>Soil testing & customized recommendations</li>
+            <li>Good Agricultural Practices (GAP)</li>
+            <li>Post-harvest handling & storage</li>
+            <li>Climate-smart farming techniques</li>
+            <li>Export certification support</li>
+          </ol>
+        </div>
+        <div style="flex:1;min-width:300px;">
+          <h3>Value-Added Support</h3>
+          <ul class="check" style="font-size:1.1em;">
+            <li>Contract farming with buy-back guarantee</li>
+            <li>Equipment rental (tractors, planters)</li>
+            <li>Credit facilities via partners</li>
+            <li>Direct market linkage</li>
+            <li>Free agronomist field visits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="background:var(--primary);color:white;">
+    <div class="container" style="text-align:center;">
+      <h2>Get In Touch</h2>
+      <p style="font-size:1.3em;max-width:700px;margin:20px auto;">
+        Ready to boost your harvest? Let’s talk!
+      </p>
+      <p><strong>Email:</strong> info@greenharvest.africa<br>
+         <strong>Phone:</strong> +233 50 000 1234<br>
+         <strong>Offices:</strong> Accra • Kumasi • Tamale</p>
+
+      <form style="max-width:600px;margin:40px auto;text-align:left;">
+        <input type="text" placeholder="Your Name" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:none;">
+        <input type="email" placeholder="Your Email" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:none;">
+        <textarea placeholder="Your Message" rows="6" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:none;"></textarea>
+        <button type="submit" class="btn" style="width:100%;background:var(--gold);border:none;cursor:pointer;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GreenHarvest Agribusiness Company. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>
